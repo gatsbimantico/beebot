@@ -1,0 +1,22 @@
+a:link,
+a:visited,
+a:hover,
+a:active {
+    text-decoration: none !important;
+}
+
+.nav-wrapper a:link,
+.nav-wrapper a:visited,
+.nav-wrapper a:hover,
+.nav-wrapper a:active {
+    color: white;
+}
+
+.brand-logo {
+    height: 100%;
+}
+
+.brand-logo img {
+    margin-left: 0.5em;
+    height: 60%;
+}
