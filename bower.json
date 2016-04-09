@@ -1,0 +1,35 @@
+{
+  "name": "beebot",
+  "version": "0.1.0",
+  "description": "Yet another amazing AngularJS app",
+  "keywords": [
+    "angular"
+  ],
+  "homepage": "https://github.com/gatsbimantico/beebot",
+  "bugs": "https://github.com/gatsbimantico/beebot/issues",
+  "author": {
+    "name": "",
+    "email": "",
+    "url": "https://github.com/gatsbimantico"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/gatsbimantico/beebot.git"
+  },
+  "licenses": [
+    {
+      "type": "MIT"
+    }
+  ],
+  "dependencies": {
+    "bootstrap": "3.3.6",
+    "font-awesome": "4.5.0",
+    "ui-router": "0.2.18",
+    "angular-animate": "^1.5.3",
+    "angular-i18n": "^1.5.3",
+    "angular-resource": "^1.5.3",
+    "angular-route": "^1.5.3",
+    "angular": "^1.5.3",
+    "animate.css": "^3.5.1"
+  }
+}
