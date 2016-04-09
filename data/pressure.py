@@ -1,7 +1,6 @@
 import Adafruit_BMP.BMP085 as BMP085
 
 sensor = BMP085.BMP085()
-temp = sensor.read_temperature()
 
 class Pressure:
 	__instance=None
@@ -9,5 +8,5 @@ class Pressure:
 		if Pressure.__instance is None:
 			Pressure.__instance=BMP085.BMP085()
 	def getData(self):
-		return Pressure.__instance.read_temperature()
+		return Pressure.__instance.read_pressure()
 				
