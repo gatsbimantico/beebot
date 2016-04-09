@@ -2,8 +2,8 @@
 bower_components/
 app/bower_components/
 node_modules/
-tmp/
-target/
+*/tmp/
+*/target/
 *.classpath
 *.settings
 *.project
