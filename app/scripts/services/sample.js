@@ -1,3 +1,3 @@
 'use strict';
 
-angular.module('gatsbimantico.Beebot')
+angular.module('Beebot')

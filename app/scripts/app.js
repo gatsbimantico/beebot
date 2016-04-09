@@ -1,26 +1,21 @@
 'use strict';
 
-angular.module('gatsbimantico.Beebot', ['ngAnimate', 'ngResource', 'ngRoute'])
+angular.module('Beebot', ['ngAnimate', 'ngResource', 'ngRoute', 'zingchart-angularjs'])
 
-  .constant('version', 'v0.1.0')
+.constant('version', 'v0.1.0')
 
-  .config(function($locationProvider, $routeProvider) {
-
-    $locationProvider.html5Mode(false);
+.config(function ($locationProvider, $routeProvider) {
 
     $routeProvider
-      .when('/', {
-        templateUrl: 'views/home.html'
-      })
-      .when('/features', {
-        templateUrl: 'views/features.html'
-      })
-      .when('/contact', {
-        templateUrl: 'views/contact.html'
-      })
-      .otherwise({
-        redirectTo: '/'
-      });
+        .when('/sensors/', {
+            templateUrl: 'views/home.html'
+        })
+        .when('/contact', {
+            templateUrl: 'views/contact.html'
+        })
+        .otherwise({
+            redirectTo: '/sensors/'
+        });
 
-  });
-
+    $locationProvider.html5Mode(false);
+});

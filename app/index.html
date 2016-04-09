@@ -1,7 +1,7 @@
 <!doctype html>
 <!--[if lt IE 9]> <html class="no-js lt-ie9" lang="es" ng-app="gatsbimantico.Beebot"> <![endif]-->
 <!--[if gt IE 8]><!-->
-<html class="no-js" lang="es" ng-app="gatsbimantico.Beebot">
+<html class="no-js" lang="es" ng-app="Beebot">
 <!--<![endif]-->
 
 <head>
@@ -36,13 +36,14 @@
 
     <!-- build:css styles/components.min.css -->
     <!-- bower:css -->
+    <link rel="stylesheet" href="bower_components/animate.css/animate.css" />
     <!-- endbower -->
     <!-- endbuild -->
 
     <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="bower_components/font-awesome/css/font-awesome.css">
     <link rel="stylesheet" href="bower_components/animate.css/animate.min.css">
-    <link rel="stylesheet" href="bower_components/Materialize/dist/css/materialize.min.css">
+    <link rel="stylesheet" href="components/Materialize/dist/css/materialize.min.css">
 
     <!-- build:css(.tmp) styles/main.min.css -->
     <link rel="stylesheet" href="styles/custom.css">
@@ -50,39 +51,19 @@
 
 </head>
 
-<body ontouchstart ng-controller="MainCtrl">
+<body ontouchstart ng-controller="MainCtrl" class="grey lighten-5">
     <header>
-        <nav class="amber z-depth-2">
+        <nav class="amber z-depth-1">
             <div class="nav-wrapper">
-                <a class="brand-logo" href="#"><img src="images/beebot.svg" /></a>
+                <a class="brand-logo" href="#/"><img src="images/beebot.svg" /></a>
                 <ul id="nav-mobile" class="right hide-on-med-and-down">
-                    <li><a href="sass.html">Sensores <span class="badge">{{sensors.length}}</span></a></li>
+                    <li><a href="#/sensors/">Sensores <span class="badge">{{sensors.length}}</span></a></li>
                 </ul>
             </div>
         </nav>
     </header>
-    <main>
-        <div class="section white white-text">
-        </div>
-        <div class="col-xs-12">
-            <div class="container">
-                <div class="col s12 m8 offset-m2 l6 offset-l3" ng-repeat="sensor in sensors">
-                    <div class="card">
-                        <div class="card-image waves-effect waves-block waves-light">
-                            <img class="activator" src="images/office.jpg">
-                        </div>
-                        <div class="card-content">
-                            <span class="card-title activator grey-text text-darken-4">Card Title<i class="material-icons right">more_vert</i></span>
-                            <p><a href="#">This is a link</a></p>
-                        </div>
-                        <div class="card-reveal">
-                            <span class="card-title grey-text text-darken-4">Card Title<i class="material-icons right">close</i></span>
-                            <p>Here is some more information about this product that is only revealed once clicked on.</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
+    <main ng-view>
+
     </main>
 
     <!-- build:js scripts/components.min.js -->
@@ -96,11 +77,14 @@
     <!-- endbower -->
     <script src="bower_components/angular-i18n/angular-locale_es.js"></script>
     <!-- endbuild -->
-    <script src="bower_components/Materialize/dist/js/materialize.min.js"></script>
+    <script src="components/Materialize/dist/js/materialize.min.js"></script>
+    <script src="http://cdn.zingchart.com/zingchart.min.js"></script>
+    <script src="http://cdn.zingchart.com/angular/zingchart-angularjs.js"></script>
 
     <!-- build:js scripts/app.min.js -->
     <script src="scripts/app.js"></script>
     <script src="scripts/controllers/main.js"></script>
+    <script src="scripts/controllers/sensor.js"></script>
     <!-- endbuild -->
 
 </body>

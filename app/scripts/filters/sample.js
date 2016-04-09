@@ -1,15 +1,15 @@
 'use strict';
 
-angular.module('gatsbimantico.Beebot')
+angular.module('Beebot')
 
-  .filter('time', function() {
-    return function(obj) {
-      return +new Date(obj);
+.filter('time', function () {
+    return function (obj) {
+        return +new Date(obj);
     };
-  })
+})
 
-  .filter('startFrom', function() {
-    return function(obj, index) {
-      return obj && obj.slice(index);
+.filter('startFrom', function () {
+    return function (obj, index) {
+        return obj && obj.slice(index);
     };
-  });
+});

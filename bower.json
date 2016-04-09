@@ -30,6 +30,7 @@
     "angular-resource": "^1.5.3",
     "angular-route": "^1.5.3",
     "angular": "^1.5.3",
-    "animate.css": "^3.5.1"
+    "animate.css": "^3.5.1",
+    "ng-chartjs": "petermelias/angular-chartjs#^0.0.5"
   }
 }

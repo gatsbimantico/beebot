@@ -1,26 +1,17 @@
 'use strict';
 
-angular.module('gatsbimantico.Beebot')
+angular.module('Beebot')
 
-.controller('MainCtrl', ['$scope', '$location', 'version', '$resource', function ($scope, $location, version, $resource) {
+.controller('MainCtrl', ['$scope', '$location', 'version', '$resource', '$routeParams', function ($scope, $location, version, $resource, $routeParams) {
 
     $scope.$path = $location.path.bind($location);
     $scope.version = version;
 
 
-    var E = $resource("http://192.168.13.100:8080/sensor/2/historic");
+    var E = $resource("http://192.168.13.100:8080/sensor/");
 
-    window.console.log(E);
-    var entries = E.query(function () {
-        console.log(entries);
+    $scope.sensors = E.query(function (data) {
+        $scope.sensors = data;
     });
-
-    $scope.sensors = [
-        {
-            name: 'Sensor 1',
-            t: 25,
-            h: 0.8
-        }
-    ];
 
 }]);
