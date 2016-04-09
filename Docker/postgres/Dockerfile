@@ -6,8 +6,8 @@ USER postgres
 COPY ./db_setup.sql ./db_setup.sql
 
 RUN /etc/init.d/postgresql start \
-  && psql --command "CREATE USER iot WITH SUPERUSER PASSWORD 'gpul';" \
-  && createdb -O iot iotlabs \
-  && psql -d iotlabs -a -f db_setup.sql
+  && psql --command "CREATE USER invitado WITH SUPERUSER PASSWORD 'invitado';" \
+  && createdb -O invitado raspberry \
+  && psql -d raspberry -a -f db_setup.sql
 
-CMD /etc/init.d/postgresql start && psql -d iotlabs
+CMD /etc/init.d/postgresql start && psql -d raspberry
