@@ -23,4 +23,8 @@ public interface DataDAO extends JpaRepository<Data, Long> {
 	
 	@Query("SELECT d FROM Data d WHERE d.sensor = :sensorId order by time desc")
 	public List<Data> findLastEntry(@Param("sensorId") Long sensorId);
+
+	@Query("SELECT d FROM Data d WHERE d.date >= :startDate and d.date <= :endDate")
+	public List<Data> findBetweenDates(@Param("startDate") long startDate, @Param("endDate") long endDate);
+	
 }
